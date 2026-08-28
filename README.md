@@ -29,7 +29,7 @@
 ## 👥 팀원 및 역할
 
 | 이름 | 역할 | GitHub |
-
+| --- | --- | --- | 
 | 박수환 | (역할) | [@pionsuhwan-hub](pionsuhwan@gmail.com) |
 | 황규리 | (역할) | [@HwangGyuri](gyuriyuri2580@gmail.com ) |
 | 배기홍 | (역할) | [@Kihong-s](golden7kihong@gmail.com) |
