@@ -18,7 +18,7 @@
 | Backend   |  Expres |
 | Database  | postgreSQL |
 | 협업 도구  | GitHub, Discord |
-| 배포      | Vercel, AWS |
+| 배포      | - |
 
 ## ✨ 주요 기능
 
