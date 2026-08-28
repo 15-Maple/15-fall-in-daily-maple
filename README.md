@@ -18,7 +18,7 @@
 | Backend   |  Expres |
 | Database  | postgreSQL |
 | 협업 도구  | GitHub, Discord |
-| 배포      | Vercel, AWS |
+| 배포      | - |
 
 ## ✨ 주요 기능
 
@@ -27,8 +27,6 @@
 - [ ] 기능 3
 
 ## 👥 팀원 및 역할
-
-| 이름 | 역할 | GitHub |
 
 | 박수환 | (역할) | [@pionsuhwan-hub](pionsuhwan@gmail.com) |
 | 황규리 | (역할) | [@HwangGyuri](gyuriyuri2580@gmail.com ) |
