@@ -49,7 +49,7 @@
 ## 👥 팀원 및 역할
 
 | 이름 | 공통 | 개발 | GitHub |
-| --- | --- | --- | 
+| --- | --- | --- | --- | 
 | 박수환 | 발표 및 일정관리 | 습관 생성 및 조회 | [@pionsuhwan-hub](pionsuhwan@gmail.com) |
 | 황규리 | 회의록 작성 및 프로젝트 문서관리 | 스터디 개설 및 관리 | [@HwangGyuri](gyuriyuri2580@gmail.com ) |
 | 배기홍 | 디자인 시안 제작 | 습관 체크(기록) | [@Kihong-s](golden7kihong@gmail.com) |
