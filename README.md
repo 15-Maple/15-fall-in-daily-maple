@@ -169,6 +169,7 @@ npm run dev
 ## 📂 폴더 구조
 
 ### Frontend
+```
 15-fall-in-daily-maple-fe/
 ├── src/
 │   ├── api/
@@ -187,6 +188,7 @@ npm run dev
 ├── .husky/           # 커밋 전 자동 검사 (lint-staged, commitlint)
 ├── package.json
 └── vite.config.js
+```
 
 ## 📋 이슈 및 프로젝트 관리
 
