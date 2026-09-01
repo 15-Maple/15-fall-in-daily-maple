@@ -13,15 +13,19 @@
 - **팀 인원**:  6명
 - **진행 방식**: GitHub Flow 기반 협업 (이슈 → 브랜치 → PR → 리뷰 → 병합)
 
+## core time 
+
+pm 3시 ~ 6시 
+
 ## 🛠 기술 스택
 
 | 분야 | 스택 |
 | --- | --- |
 | Frontend  |  React |
-| Backend   |  Expres |
-| Database  | postgreSQL |
+| Backend   |  Express |
+| Database  | PostgreSQL |
 | 협업 도구  | GitHub, Discord |
-| 배포      | netlify, Render |
+| 배포      | Netlify, Render |
 
 
 ## ✨ 주요 기능
@@ -82,12 +86,56 @@ main        # 배포 가능한 안정 버전
      └─ fix/이슈번호-버그내용       # 버그 수정
 ```
 
+
 - 모든 작업은 `develop`에서 브랜치를 분기하여 진행합니다.
 - 작업 완료 후 `develop`으로 Pull Request를 생성합니다.
 - 최소 1명 이상의 리뷰 승인 후 병합합니다.
 - 일정 주기로 `develop` → `main` 병합 및 릴리즈를 진행합니다.
 
-## 📝 커밋 컨벤션
+
+
+
+## 📐 팀 컨벤션 & 규칙
+
+- 자유 [ 10시 자유회의 (각 조 파트너 끼리 진행상황 앞으로의 일정 이야기하기) ]
+- 필수 [ 11시 전체회의 (팀 진행상황 파악 / 현재 이슈 공유/ 잡담) ]
+- 팀원 모두에게 리뷰 요청 후 반드시! 같은 조원에게 코드리뷰 후 develop에 머지하기
+- 매일 스크럼(당일 컨디션, 스케줄 공유, 할 일 배분) 시간 오전 11시 전체회의에서 공유하기
+- 팀 미팅 불참 시 최소한 하루 전에 말하기
+
+
+### git 컨벤션
+
+- 브런치 이름을 한글로 쓰지 않습니다.❌
+(feature/기능이름   # 개별 기능 개발이름 작성시 영어로 작성)
+- 커밋 메세지는 한글 사용가능합니다.
+
+### 코딩 컨벤션
+
+- 컴포넌트: PascalCase (StudyCard)
+- 함수와 변수: camelCase (fetchStudies)
+- 상수: 모두 대문자, 공백은 _  (MONGO_URI)
+- 폴더명: camelCase
+
+- 이미지
+    ◦ 위치: src/assets
+    ◦ 파일 형식: .svg
+    ◦ 파일명: 전부 소문자, 공백은 _  (ic_favicon.svg)
+    ◦ 이미지 변수명: 이미지의 파일명과 동일, camelCase  (icFavicon)
+
+- css module: camelCase .container
+
+### 협업 규칙
+- 각 조 파트너 리뷰는 5명에게 걸고 pr 후 파트너는 동작을 확인하고 10시 자유회의에서 논의 후 머지하기. 
+- 만약 관련된 개발 내용이라면 따로 해당 조원의 리뷰도 받고 머지해주세요.( 오늘의 습관 - 스터디상세 )
+- push --force 절대금지!❌
+
+### ai 규칙
+ai 자유롭게 사용 가능하지만 복사붙여넣기는 권장하지 않습니다.💥💔
+또한 ai 관련해서 질문과 해결방법을 따로 문서화💬 해주시고 서로서로 도움이 될거 같습니다. 
+
+
+### 📝 커밋 컨벤션
 
 | 태그 | 설명 |
 | --- | --- |
@@ -102,15 +150,6 @@ main        # 배포 가능한 안정 버전
 예시: `feat: 로그인 기능 구현`
 
 
-## 규칙
-
-- 자유 [ 10시 자유회의 (각 조 파트너 끼리 진행상황 앞으로의 일정 이야기하기) ]
-- 필수 [ 11시 전체회의 (팀 진행상황 파악 / 현재 이슈 공유/ 잡담) ]
-- 팀원 모두에게 리뷰 요청 후 반드시! 같은 조원에게 코드리뷰 후 develop에 머지하기
-- 매일 스크럼(당일 컨디션, 스케줄 공유, 할 일 배분) 시간 오전 11시 전체회의에서 공유하기
-- 팀 미팅 불참 시 최소한 하루 전에 말하기
-- 컨벤션 잘 지키기 : 코딩 컨벤션, 커밋 메시지 컨벤션
-- push --force 절대금지!❌
 
 ## 🚀 시작하기
 
@@ -124,18 +163,29 @@ npm install
 
 # 개발 서버 실행
 npm run dev
-
+```
 
 ## 📂 폴더 구조
 
-
-studyForest/
+### Frontend
+15-fall-in-daily-maple-fe/
 ├── src/
+│   ├── api/
+│   ├── assets/
 │   ├── components/
+│   │   ├── common/
+│   │   └── layout/
+│   ├── constants/
+│   ├── hooks/
 │   ├── pages/
-│   └── ...
-├── ~.js
-└── README.md
+│   ├── utils/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .github/          # PR 템플릿
+├── .husky/           # 커밋 전 자동 검사 (lint-staged, commitlint)
+├── package.json
+└── vite.config.js
 
 ## 📋 이슈 및 프로젝트 관리
 
