@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4e4d6;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+/* 헤더 */
+
+.header {
+  width: min(100% - 48px, 980px);
+  margin: 0 auto;
+  min-height: 90px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-image {
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+  display: block;
+}
+
+.create-logs-button {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #8b654a;
+  color: white;
+
+  font-size: clamp(12px, 1.5vw, 14px);
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+/* 페이지 전체 */
+
+.home-page {
+  width: min(100% - 48px, 980px);
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+/* 제목 */
+
+.section-title {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 700;
+}
+
+/* 최근 조회한 스터디 */
+.recent-logs {
+  padding: clamp(16px, 3vw, 24px);
+  margin-bottom: 24px;
+
+  background-color: white;
+  border-radius: 16px;
+}
+
+.recent-logs-list {
+  min-height: clamp(140px, 25vw, 220px);
+
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 스터디 둘러보기 */
+
+.logs-list {
+  padding: clamp(16px, 3vw, 24px);
+
+  background-color: white;
+  border-radius: 16px;
+}
+
+.logs-list-controls {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+/* 검색 */
+
+.logs-search-input {
+  flex: 1 1 220px;
+
+  max-width: 280px;
+
+  min-width: 0;
+
+  padding: 10px 16px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+/* 정렬 */
+
+.logs-sort-box {
+  position: relative;
+  width: 120px;
+  height: 44px;
+}
+
+.logs-sort-button {
+  width: 120px;
+  height: 44px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  font-size: 14px;
+  color: #666;
+
+  cursor: pointer;
+}
+
+.logs-sort-arrow {
+  position: absolute;
+  right: 16px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666;
+}
+
+.logs-sort-label {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-30%, -30%);
+
+  font-size: 14px;
+  color: #666;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+.logs-sort-select {
+  width: 100%;
+  height: 100%;
+
+  min-width: 120px;
+  min-height: 44px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+
+  background-color: white;
+
+  color: transparent;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+}
+
+/* select-box */
+.logs-sort-box::after {
+  content: "";
+
+  position: absolute;
+  top: 40%;
+  right: 41px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666;
+
+  transform: translateY(-30%);
+
+  pointer-events: none;
+}
+
+/* 정렬 메뉴 */
+.logs-sort-menu {
+  position: absolute;
+
+  top: calc(100% + 4px);
+  right: 0;
+
+  width: 160px;
+
+  background-color: white;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  z-index: 10;
+}
+
+/* 스터디 리스트 */
+
+.logs-grid {
+  min-height: clamp(220px, 45vw, 380px);
+
+  margin-top: 24px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+
+  gap: 24px;
+
+  align-items: start;
+}
+
+/* 스터디 카드 */
+
+.logs-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+
+  background-color: white;
+}
+
+.logs-card-background {
+  height: 160px;
+}
+
+.logs-card-content {
+  padding: 20px;
+}
+
+.logs-card-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.logs-card-description {
+  margin: 0 0 16px;
+
+  font-size: 14px;
+  color: #666;
+}
+.logs-card-info {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+.logs-card-date {
+  margin: 0;
+
+  font-size: 13px;
+  color: #888;
+}
+
+/* 빈창 */
+
+.empty-message {
+  margin: auto;
+
+  color: #777;
+  font-size: clamp(12px, 1.5vw, 14px);
+
+  text-align: center;
+}
+
+/* .logs-sort-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+} */

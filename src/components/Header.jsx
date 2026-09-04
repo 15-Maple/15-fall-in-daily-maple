@@ -1,9 +1,11 @@
+import logo from "../assets/ic-logo.svg";
+
 function Header() {
   return (
     <header className="header">
-      <div className="logo">Fall in Daily</div>
+      <img src={logo} alt="fall in daily" className="logo-image" />
 
-      <button className="create-study-button">스터디 만들기</button>
+      <button className="create-logs-button">스터디 만들기</button>
     </header>
   );
 }

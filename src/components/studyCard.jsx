@@ -13,13 +13,13 @@ function StudyCard({
         </div>
 
         <div className = "logs-card-content">
-            <h3>{name}</h3>
-            <p>{discription}</p>
+            <h3 className="logs-card-title">{name}</h3>
+            <p className="logs-card-description">{discription}</p>
             <div className="logs-card-info">
                 <span>{point}P 획득</span>
                 <span>{emojiCount}</span>
             </div>
-            <p>{elapsedDays}일째 진행중</p>
+            <p className="logs-card-date">{elapsedDays}일째 진행중</p>
         </div>
     </article>
   );
